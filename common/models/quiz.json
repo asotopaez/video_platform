@@ -1,0 +1,72 @@
+{
+  "name": "Quiz",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "estimatedMaxTime": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "star_required": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "questions": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "upload_date": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "description": {
+      "type": "string"
+    },
+    "locked": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "StudentAdvance": {
+      "type": "hasMany",
+      "model": "QuizStudentAdvance",
+      "foreignKey": "quiz_id"
+    },
+    "studentAdvanceTodays": {
+      "type": "hasMany",
+      "model": "StudentAdvanceToday",
+      "foreignKey": "quiz_id"
+    },
+    "studentReportsTimes": {
+      "type": "hasMany",
+      "model": "StudentReportsTime",
+      "foreignKey": "quiz_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

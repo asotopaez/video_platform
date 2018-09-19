@@ -1,0 +1,74 @@
+{
+  "name": "QuizStudentAdvance",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "quiz_advance_percentaje": {
+      "type": "string",
+      "required": true,
+      "default": "0"
+    },
+    "quiz_finish": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "milisecons_quiz": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "attempts_succes": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "attempts_fail": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "quiz_score": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "extra_points_video": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "extra_points": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "rupees_win": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "starts_win": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "maps_win": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "StudentReportsTime",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "initial_date": {
+      "type": "date",
+      "required": true
+    },
+    "end_date": {
+      "type": "date",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "succes_attempt": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

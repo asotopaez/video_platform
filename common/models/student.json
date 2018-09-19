@@ -1,0 +1,91 @@
+{
+  "name": "Student",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "foto": {
+      "type": "string"
+    },
+    "group_school": {
+      "type": "string"
+    },
+    "create_at": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ChapterAdvance": {
+      "type": "hasMany",
+      "model": "ChapterStudentAdvance",
+      "foreignKey": "student_id"
+    },
+    "QuizAdvance": {
+      "type": "hasMany",
+      "model": "QuizStudentAdvance",
+      "foreignKey": "student_id"
+    },
+    "SubjectAdvance": {
+      "type": "hasMany",
+      "model": "SubjectExamStudentAdvance",
+      "foreignKey": "student_id"
+    },
+    "studentAdvanceTodays": {
+      "type": "hasMany",
+      "model": "StudentAdvanceToday",
+      "foreignKey": "student_id"
+    },
+    "student_id": {
+      "type": "hasMany",
+      "model": "StudentReportsTime",
+      "foreignKey": "student_id"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

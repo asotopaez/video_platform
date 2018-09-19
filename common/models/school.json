@@ -1,0 +1,35 @@
+{
+  "name": "School",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "direction": {
+      "type": "string"
+    },
+    "cct_number": {
+      "type": "string"
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Student": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "school_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

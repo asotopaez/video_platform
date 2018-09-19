@@ -1,0 +1,29 @@
+{
+  "name": "TypeCustomer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Customer": {
+      "type": "hasMany",
+      "model": "CustomerUser",
+      "foreignKey": "type_customer_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

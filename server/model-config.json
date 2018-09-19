@@ -1,0 +1,146 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongodb"
+  },
+  "AccessToken": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "CustomerUser": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CreditCardCustomer": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Bank": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "TypeCustomer": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "StatusCustomer": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Student": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "ZipCode": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "School": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Level": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Grade": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Subject": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Chapter": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Topic": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Exam": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Quiz": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "TypeOfExam": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Video": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "SubjectExamStudentAdvance": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "ChapterStudentAdvance": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "QuizStudentAdvance": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "TypeOfCard": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "AccountPlan": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "StudentAdvanceToday": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "StudentReportsTime": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CustomerChargesConekta": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CustomerChargesPaypal": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Interested": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

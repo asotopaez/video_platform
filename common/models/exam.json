@@ -1,0 +1,43 @@
+{
+  "name": "Exam",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "questions": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "upload_date": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "description": {
+      "type": "string"
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "SubjectStudentAdvance": {
+      "type": "hasMany",
+      "model": "SubjectExamStudentAdvance",
+      "foreignKey": "exam_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Chapter",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Topics": {
+      "type": "hasMany",
+      "model": "Topic",
+      "foreignKey": "chapter_id"
+    },
+    "StudentAdvance": {
+      "type": "hasMany",
+      "model": "ChapterStudentAdvance",
+      "foreignKey": "chapter_id"
+    },
+    "studentAdvanceTodays": {
+      "type": "hasMany",
+      "model": "StudentAdvanceToday",
+      "foreignKey": "chapter_id"
+    },
+    "quizStudentAdvances": {
+      "type": "hasMany",
+      "model": "QuizStudentAdvance",
+      "foreignKey": "chapter_id"
+    },
+    "studentReportsTimes": {
+      "type": "hasMany",
+      "model": "StudentReportsTime",
+      "foreignKey": "chapter_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

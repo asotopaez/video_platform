@@ -1,0 +1,75 @@
+{
+  "name": "CustomerUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "corporate": {
+      "type": "boolean",
+      "default": false
+    },
+    "payment_sources": {
+      "type": "array"
+    },
+    "shipping_contacts": {
+      "type": "array"
+    },
+    "id_conekta": {
+      "type": "string"
+    },
+    "id_paypal": {
+      "type": "string"
+    },
+    "id_billing_agreement_paypal": {
+      "type": "string"
+    },
+    "create_at": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "CreditCard": {
+      "type": "hasMany",
+      "model": "CreditCardCustomer",
+      "foreignKey": "customer_user_id"
+    },
+    "Student": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "customer_user_id"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

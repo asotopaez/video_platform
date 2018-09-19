@@ -1,0 +1,34 @@
+{
+  "name": "TypeOfExam",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Exam": {
+      "type": "hasMany",
+      "model": "Exam",
+      "foreignKey": "type_of_exam_id"
+    },
+    "Quiz": {
+      "type": "hasMany",
+      "model": "Quiz",
+      "foreignKey": "type_of_exam_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Bank",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "bank_name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "CreditCard": {
+      "type": "hasMany",
+      "model": "CreditCardCustomer",
+      "foreignKey": "bank_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

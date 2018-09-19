@@ -1,0 +1,41 @@
+{
+  "name": "ZipCode",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "zipcode": {
+      "type": "string",
+      "required": true
+    },
+    "colony_name": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "municipality": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Customer": {
+      "type": "hasMany",
+      "model": "CustomerUser",
+      "foreignKey": "zip_code_id"
+    },
+    "School": {
+      "type": "hasMany",
+      "model": "School",
+      "foreignKey": "zip_code_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

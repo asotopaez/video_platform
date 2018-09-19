@@ -1,0 +1,71 @@
+{
+  "name": "AccountPlan",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "object": {
+      "type": "string",
+      "default": "plan"
+    },
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "livemode": {
+      "type": "boolean",
+      "default": false
+    },
+    "frequency": {
+      "type": "number",
+      "required": true
+    },
+    "trial_period_days": {
+      "type": "number",
+      "required": true
+    },
+    "interval_total_count": {
+      "type": "number",
+      "required": true
+    },
+    "interval": {
+      "type": "string",
+      "required": true,
+      "default": "month"
+    },
+    "number_students": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "currency": {
+      "type": "string",
+      "required": true,
+      "default": "MXN"
+    },
+    "msj": {
+      "type": "string"
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Customer": {
+      "type": "hasMany",
+      "model": "CustomerUser",
+      "foreignKey": "plan_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,34 @@
+{
+  "name": "ChapterStudentAdvance",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "video_advance_count": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "qualification": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "video_finish": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

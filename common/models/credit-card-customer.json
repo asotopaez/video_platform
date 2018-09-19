@@ -1,0 +1,69 @@
+{
+  "name": "CreditCardCustomer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "token_id": {
+      "type": "string",
+      "required": true
+    },
+    "object": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object"
+    },
+    "exp_month": {
+      "type": "string",
+      "required": true
+    },
+    "exp_year": {
+      "type": "string",
+      "required": true
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "last4": {
+      "type": "string",
+      "required": true
+    },
+    "parent_id": {
+      "type": "string"
+    },
+    "suscription_conekta_id": {
+      "type": "string"
+    },
+    "card_conekta_id": {
+      "type": "string"
+    },
+    "status_card": {
+      "type": "string"
+    },
+    "default": {
+      "type": "boolean",
+      "default": false
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

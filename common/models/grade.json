@@ -1,0 +1,39 @@
+{
+  "name": "Grade",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Subjects": {
+      "type": "hasMany",
+      "model": "Subject",
+      "foreignKey": "grade_id"
+    },
+    "Student": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "grade_id"
+    },
+    "studentReportsTimes": {
+      "type": "hasMany",
+      "model": "StudentReportsTime",
+      "foreignKey": "grade_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

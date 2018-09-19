@@ -1,0 +1,39 @@
+{
+  "name": "Level",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Student": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "level_id"
+    },
+    "Grade": {
+      "type": "hasMany",
+      "model": "Grade",
+      "foreignKey": "level_id"
+    },
+    "School": {
+      "type": "hasMany",
+      "model": "School",
+      "foreignKey": "level_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "SubjectExamStudentAdvance",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "subject_advance_percentaje": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

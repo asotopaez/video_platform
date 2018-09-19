@@ -1,0 +1,29 @@
+{
+  "name": "TypeOfCard",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "creditCardCustomers": {
+      "type": "hasMany",
+      "model": "CreditCardCustomer",
+      "foreignKey": "type_of_card"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

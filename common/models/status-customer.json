@@ -1,0 +1,34 @@
+{
+  "name": "StatusCustomer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activate": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Customer": {
+      "type": "hasMany",
+      "model": "CustomerUser",
+      "foreignKey": "status_id"
+    },
+    "Student": {
+      "type": "hasMany",
+      "model": "Student",
+      "foreignKey": "status_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
